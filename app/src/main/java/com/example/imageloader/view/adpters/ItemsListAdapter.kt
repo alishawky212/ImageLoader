@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.imageloader.models.Item
 import com.example.imageloader.R
 import com.example.imageloader.inflate
-import com.example.imageloader.loadImage
+import com.example.loaderlib.loadImage
 import kotlinx.android.synthetic.main.card_item_view.view.*
 import javax.inject.Inject
 

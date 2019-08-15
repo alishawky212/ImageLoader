@@ -3,7 +3,6 @@ package com.example.imageloader
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
@@ -12,7 +11,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.loaderlib.MindLoader
 
 fun ViewGroup.inflate(layoutId: Int): View {
     return LayoutInflater.from(context).inflate(layoutId, this, false)
@@ -31,7 +29,6 @@ fun <T : Any, L : LiveData<T>> LifecycleOwner.observe(liveData: L, body: (T?) ->
     liveData.observe(this, Observer(body))
 }
 
-fun ImageView.loadImage(url: String,placeholder: Int) = MindLoader.getImageLoader().loadImage(url,this,placeholder)
 
 fun SwipeRefreshLayout.startRefreshing() {
     isRefreshing = true
